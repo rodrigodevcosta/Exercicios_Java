@@ -1,0 +1,65 @@
+package com.br.exercicio7;
+
+import java.util.Scanner;
+
+public class Exercicio7 {
+	Scanner scanner = new Scanner(System.in);
+	String nome = "";
+	int idade = 0;
+	float nota1 = 0;
+	float nota2 = 0;
+	float media = 0;
+
+	public void executar() {
+
+		System.out.println(
+				"Desenvolver uma aplicação que realiza duas"
+				+ " tarefas distintas. Primeiro, solicita ao usuário "
+				+ "a entrada do nome e da idade. Em seguida, com base na"
+				+ " idade, classifica a pessoa em \"Menor de Idade\","
+				+ " \"Maior de Idade\" ou \"Idade Feliz\". "
+				+ "Após essa classificação, a aplicação pede a entrada"
+				+ " das notas das provas 01 e 02. O programa calcula a média"
+				+ " aritmética entre essas notas e devolve uma das seguintes "
+				+ "respostas: \"Reprovado\", \"Recuperação\" ou \"Aprovado\".)");
+
+		System.out.println("Entre com o nome:");
+		nome = scanner.nextLine();
+
+		System.out.println("Entre com a idade:");
+		idade = scanner.nextInt();
+
+		if (idade >= 18 && idade < 60) {
+
+			System.out.println("Maior de idade");
+
+		}
+		if (idade < 18) {
+			System.out.println("Menor de idade");
+
+		}
+		if (idade >= 60) {
+			System.out.println("Idade Feliz");
+
+		}
+		System.out.println("Entre com a nota 1:");
+		nota1 = scanner.nextFloat();
+
+		System.out.println("Entre com a nota 2:");
+		nota2 = scanner.nextFloat();
+
+		media = (nota1 + nota2) / 2;
+
+		if (media < 4) {
+			System.out.println("Aluno" + " " + nome + "reprovado");
+		}
+		if (media >= 4 && media <= 5) {
+			System.out.println("Aluno" + " " + nome + "recuperação");
+		}
+		if (media > 5) {
+			System.out.println("Aluno" + " " + nome +" aprovado");
+		}
+
+	}
+
+}
