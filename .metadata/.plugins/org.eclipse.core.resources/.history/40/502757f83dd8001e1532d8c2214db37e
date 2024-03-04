@@ -1,0 +1,23 @@
+package com.br.exercicio5;
+
+import java.util.Scanner;
+
+public class Exercicio5 {
+	Scanner scanner = new Scanner(System.in);
+
+	public void executar() {
+		String nome;
+		System.out.println("Entre com o nome:");
+		int idade;
+		System.out.println("Entre com a idade:");
+		nome = scanner.nextLine();
+		
+		idade = scanner.nextInt();
+		if (idade >= 18) {
+			System.out.println(nome + "é maior de idade");
+
+		}
+
+	}
+
+}

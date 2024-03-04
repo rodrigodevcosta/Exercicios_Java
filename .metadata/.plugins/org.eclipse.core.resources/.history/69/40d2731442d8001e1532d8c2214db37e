@@ -1,0 +1,24 @@
+package com.br.exercicio6;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio6 {
+	public void executar() {
+
+		System.out.println(
+				"Programa deve ler dois dados, nome e idade e mostra se a pessoa é maior de idade(fazer com Scanner)");
+		String nome;
+		int idade;
+
+		System.out.println("Entre com o nome:");
+		nome = JOptionPane.showInputDialog("Entre com o nome:");
+
+		System.out.println("Entre com a idade:");
+		idade = Integer.parseInt(JOptionPane.showInputDialog("Entre com a idade:"));
+		if (idade >= 18) {
+			System.out.println(nome + " " + "é maior de idade");
+
+		}
+	}
+
+}

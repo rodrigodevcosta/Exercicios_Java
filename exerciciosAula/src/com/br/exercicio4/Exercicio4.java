@@ -1,0 +1,25 @@
+package com.br.exercicio4;
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+	Scanner scanner = new Scanner(System.in);
+
+	public void executar() {
+		System.out.println("Programa lê 50 numero e mostra a soma dos número pares \n");
+		
+		int entrada = 0;
+		int soma = 0;
+		for (int i = 0; i < 50; i++) {
+			System.out.println("Entre com um numero:");
+			entrada = scanner.nextInt();
+			if (entrada % 2 == 0) {
+				soma = soma + entrada;
+			}
+
+		}
+
+		System.out.println(soma);
+	}
+	
+}

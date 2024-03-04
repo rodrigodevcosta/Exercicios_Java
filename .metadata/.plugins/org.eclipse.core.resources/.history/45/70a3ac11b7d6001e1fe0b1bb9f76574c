@@ -1,0 +1,45 @@
+package com.br.menu;
+
+import com.br.exercicio1.*;
+
+import java.util.Scanner;
+
+public class Menu {
+
+	Scanner scanner = new Scanner(System.in);
+	Exercicio1 exercicio1 = new Exercicio1();
+
+	public void Iniciar() {
+		int opc;
+
+		do {
+			opc = obterOpc();
+
+			switch (opc) {
+
+			case 1:
+				exercicio1.executar();
+			
+				break;
+				
+			case 0:
+				break;
+
+			}
+		} while (opc !=0);
+
+	}
+
+	public int obterOpc() {
+
+		System.out.println("MENU");
+		System.out.println("DIGITE UMA OPÇÃO VALIDA:");
+		System.out.println("Exercicio 1");
+		System.out.println("Exercicio 2");
+		System.out.println("Exercicio 3");
+		System.out.println("SAIR  0");
+
+		return scanner.nextInt();
+	}
+
+}
