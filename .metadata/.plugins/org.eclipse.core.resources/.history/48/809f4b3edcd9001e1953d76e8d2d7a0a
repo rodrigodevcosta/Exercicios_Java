@@ -1,0 +1,54 @@
+package com.br.exercicio8;
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+	String nome = "";
+	int cpf = 0;
+	float salario_bruto = 0;
+	float salario_liquido = 0;
+	float desc_inss = 0;
+	float desc_vale_trans = 0;
+
+	public void executar() {
+		Scanner scanner = new Scanner(System.in);
+		boolean continuar = true;
+		
+		System.out.println("Desenvolver uma aplicação que permite ao usuário inserir o nome,"
+				+ " CPF e salário bruto. O programa calculará os descontos do INSS, "
+				+ "do vale-transporte e o salário líquido. Faça a aplicação "
+				+ "com a estrutura de repetição ENQUANTO.\r\n"
+				+ "Instruções para Cálculos Fictícias:\r\n"
+				+ "Desconto do INSS:\r\n"
+				+ "Se o salário bruto for maior ou igual a 2000, "
+				+ "o desconto do INSS é de 11%.\r\n"
+				+ "Se o salário bruto for menor que 2000 e "
+				+ "maior ou igual a 1500, o desconto do INSS é de 9%.\r\n"
+				+ "Se o salário bruto for menor que 1500, "
+				+ "o desconto do INSS é de 8%.\r\n"
+				+ "Desconto do Vale-Transporte:\r\n"
+				+ "Se o salário bruto for maior ou igual a 1000, "
+				+ "o desconto do vale-transporte é de 6%.\r\n"
+				+ "Se o salário bruto for menor que 1000, "
+				+ "o desconto do vale-transporte é de 5%.\r\n"
+				+ "Cálculo do Salário Líquido:\r\n"
+				+ "Salário líquido = salário bruto – "
+				+ "desconto do INSS – desconto do vale-transporte.");
+		
+		while(continuar) {
+			System.out.println("Entre com o nome:");
+			nome = scanner.nextLine();
+			System.out.println("Entre com o CPF:");
+			cpf = scanner.nextInt();
+			System.out.println("Entre com o salário:");
+			salario_bruto = scanner.nextFloat();
+			
+			if(salario_bruto >= 2000) {
+				desc_inss = (2000*11)/100;
+			
+		}
+		
+		
+
+	}
+}

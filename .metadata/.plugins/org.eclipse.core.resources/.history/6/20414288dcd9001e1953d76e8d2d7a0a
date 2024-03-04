@@ -7,7 +7,6 @@ import com.br.exercicio4.*;
 import com.br.exercicio5.*;
 import com.br.exercicio6.*;
 import com.br.exercicio7.*;
-import com.br.exercicio8.*;
 
 import java.util.Scanner;
 
@@ -21,7 +20,6 @@ public class Menu {
 	Exercicio5 exercicio5 = new Exercicio5();
 	Exercicio6 exercicio6 = new Exercicio6();
 	Exercicio7 exercicio7 = new Exercicio7();
-	Exercicio8 exercicio8 = new Exercicio8();
 	
 
 	public void Iniciar() {
@@ -54,9 +52,6 @@ public class Menu {
 			case 7:
 				exercicio7.executar();
 				break;
-			case 8:
-				exercicio8.executar();
-				break;
 			case 0:
 
 				System.out.println("opção SAIR selecionada!");
@@ -77,7 +72,6 @@ public class Menu {
 		System.out.println("Exercicio 5");
 		System.out.println("Exercicio 6");
 		System.out.println("Exercicio 7");
-		System.out.println("Exercicio 8");
 		System.out.println("SAIR  0");
 
 		return scanner.nextInt();

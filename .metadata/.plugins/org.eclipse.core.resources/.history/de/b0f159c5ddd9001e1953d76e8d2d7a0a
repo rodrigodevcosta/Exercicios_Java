@@ -1,0 +1,67 @@
+package com.br.exercicio8;
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+	String nome = "";
+	String cpf = "";
+	float salario_bruto = 0;
+	float salario_liquido = 0;
+	float desc_inss = 0;
+	float desc_vale_trans = 0;
+	Scanner scanner = new Scanner(System.in);
+
+	public void executar() {
+
+		boolean continuar = true;
+
+		System.out.println("Desenvolver uma aplicação que permite ao usuário inserir o nome,"
+				+ " CPF e salário bruto. O programa calculará os descontos do INSS, "
+				+ "do vale-transporte e o salário líquido. Faça a aplicação "
+				+ "com a estrutura de repetição ENQUANTO.\r\n" + "Instruções para Cálculos Fictícias:\r\n"
+				+ "Desconto do INSS:\r\n" + "Se o salário bruto for maior ou igual a 2000, "
+				+ "o desconto do INSS é de 11%.\r\n" + "Se o salário bruto for menor que 2000 e "
+				+ "maior ou igual a 1500, o desconto do INSS é de 9%.\r\n" + "Se o salário bruto for menor que 1500, "
+				+ "o desconto do INSS é de 8%.\r\n" + "Desconto do Vale-Transporte:\r\n"
+				+ "Se o salário bruto for maior ou igual a 1000, " + "o desconto do vale-transporte é de 6%.\r\n"
+				+ "Se o salário bruto for menor que 1000, " + "o desconto do vale-transporte é de 5%.\r\n"
+				+ "Cálculo do Salário Líquido:\r\n" + "Salário líquido = salário bruto – "
+				+ "desconto do INSS – desconto do vale-transporte.");
+
+		while (continuar) {
+			System.out.println("Entre com o nome:");
+			nome = scanner.nextLine();
+			System.out.println("Entre com o CPF:");
+			cpf = scanner.nextLine();
+			System.out.println("Entre com o salário:");
+			salario_bruto = scanner.nextFloat();
+
+			if (salario_bruto >= 2000) {
+				desc_inss = (salario_bruto * 11) / 100;
+
+			}
+			if (salario_bruto < 2000 || salario_bruto == 1500) {
+				desc_inss = (salario_bruto * 9) / 100;
+			}
+			if (salario_bruto < 1500) {
+				desc_inss = (salario_bruto * 8) / 100;
+			}
+			if (salario_bruto >= 1000) {
+				desc_vale_trans = (salario_bruto * 6) / 100;
+			}
+			if (salario_bruto < 1000) {
+				desc_vale_trans = (salario_bruto * 5) / 100;
+			}
+			salario_liquido = salario_bruto - desc_inss - desc_vale_trans;
+
+			System.out.println("O desconto do INSS será: " + desc_inss);
+			System.out.println("O desconto do vale transporte será: " + desc_vale_trans);
+			System.out.println(" o usuário:"+ nome+ "CPF:" + cpf + " O salario liquido será: " + salario_liquido);
+			System.out.println("Para sair digite S, ou qualquer tecla para continuar ...");
+			if (scanner.nextLine() == "s" || scanner.nextLine() == "S") {
+				continuar = false;
+			}
+
+		}
+	}
+}
